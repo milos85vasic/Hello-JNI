@@ -41,9 +41,3 @@ jar {
     }
 }
 
-sourceSets.main.java.srcDirs += 'src/main/kotlin'
-
-run {
-
-    systemProperty("java.library.path", "Demo/jni")
-}

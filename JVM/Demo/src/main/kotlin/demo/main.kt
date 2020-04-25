@@ -2,8 +2,8 @@
 
 package demo
 
-fun main(args: Array<String>) {
+fun main() {
 
     val demo = NativeDemo()
-    
+    // demo.hello()
 }

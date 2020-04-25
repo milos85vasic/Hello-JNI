@@ -3,8 +3,8 @@ package demo
 class NativeDemo {
 
     init {
-        System.loadLibrary("Native")
+        System.loadLibrary("Demo")
     }
 
-
+    external fun hello()
 }
