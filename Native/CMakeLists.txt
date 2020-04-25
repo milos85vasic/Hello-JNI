@@ -23,10 +23,11 @@ add_library(${PROJECT_NAME} SHARED demo_library.cpp demo_library.h)
 install(TARGETS ${PROJECT_NAME} DESTINATION lib/${PROJECT_NAME})
 
 # Install library headers
-file(GLOB HEADERS include/*.h)
+file(GLOB HEADERS *.h)
 install(FILES ${HEADERS} DESTINATION include/${PROJECT_NAME})
 
-# Install log:
+# Example install log:
 # Install the project...
 # -- Install configuration: "Debug"
-# -- Installing: /usr/local/lib/Demo/libDemo.dylib
+# -- Up-to-date: /usr/local/lib/Demo/libDemo.dylib
+# -- Up-to-date: /usr/local/include/Demo/demo_library.h
