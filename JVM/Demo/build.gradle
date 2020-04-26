@@ -41,3 +41,5 @@ jar {
     }
 }
 
+// TODO: Write task for:
+// javah -o Test.h -classpath ./classes/kotlin/main/ demo.NativeDemo
