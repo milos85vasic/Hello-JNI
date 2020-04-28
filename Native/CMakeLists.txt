@@ -13,15 +13,16 @@ configure_file(
 # Make the JNI header file
 set(JVM_PROJECT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../JVM/Demo")
 set(JAVA_JNI_HEADERS "JavaJNIHeaders")
-ADD_CUSTOM_COMMAND(
+add_custom_command(
         OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/NativeDemo.h"
         COMMAND
             ${Java_JAVAH_EXECUTABLE}
             -o "${CMAKE_CURRENT_BINARY_DIR}/NativeDemo.h"
             -classpath "${JVM_PROJECT_PATH}/build/classes/kotlin/main"
             demo.NativeDemo
-        DEPENDS "${JVM_PROJECT_PATH}/build/classes/kotlin/main/demo/NativeDemo.class")
-ADD_CUSTOM_TARGET(${JAVA_JNI_HEADERS} ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/NativeDemo.h")
+        DEPENDS "${JVM_PROJECT_PATH}/build/classes/kotlin/main/demo/NativeDemo.class"
+)
+add_custom_target(${JAVA_JNI_HEADERS} ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/NativeDemo.h")
 
 # Require JNI
 find_package(JNI REQUIRED)
@@ -35,8 +36,8 @@ include_directories(
 # Create shared library
 file(GLOB LIB_SRC *.h *.cpp)
 add_library(${PROJECT_NAME} SHARED ${LIB_SRC})
-TARGET_LINK_LIBRARIES(${PROJECT_NAME})
-ADD_DEPENDENCIES(${PROJECT_NAME} ${JAVA_JNI_HEADERS})
+target_link_libraries(${PROJECT_NAME})
+add_dependencies(${PROJECT_NAME} ${JAVA_JNI_HEADERS})
 
 # Install library
 install(TARGETS ${PROJECT_NAME} DESTINATION lib/${PROJECT_NAME})
