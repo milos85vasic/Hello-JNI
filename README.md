@@ -5,15 +5,18 @@ Small demo program that demonstrates binding C++ with Kotlin
 
 The following steps are executed on macOS:
 
+- Make sure that Gradle is installed on your system and added to your system path
 - Clone and cd into the directory where you have cloned the code
-- `cd Native`
+- `cd JVM`
+- `gradle wrapper`
+- `./gradlew assemble`
+- `cd ../Native`
 - `mkdir Build`
 - `cd Build`
 - `cmake ..`
 - `make`
 - `make install`
 - `cd ../JVM`
-- Make sure that Gradle is installed on your system and added to your system path
 - `gradle wrapper`
 - `./gradlew clean`
 - `./gradlew assemble`
