@@ -5,7 +5,7 @@ Small demo program that demonstrates binding C++ with Kotlin
 
 The following steps are executed on macOS:
 
-- Clone project
+- Clone and cd into the directory where you have cloned the code
 - `cd Native`
 - `mkdir Build`
 - `cd Build`
