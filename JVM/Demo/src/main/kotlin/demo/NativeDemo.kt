@@ -2,9 +2,11 @@ package demo
 
 class NativeDemo {
 
-    init {
-        System.loadLibrary("Demo")
+    companion object {
+        init {
+            System.loadLibrary("Demo")
+        }
     }
 
-    external fun hello()
+    external fun helloNative()
 }
