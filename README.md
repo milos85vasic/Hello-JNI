@@ -16,9 +16,6 @@ The following steps are executed on macOS:
 - `cmake ..`
 - `make`
 - `make install`
-- `cd ../../JVM`
-- `./gradlew clean`
-- `./gradlew assemble`
-- `cd Demo/build/libs`
+- `cd ../../JVM/Demo/build/libs`
 - `java -jar -Djava.library.path=/usr/local/lib/Demo Demo.jar`
 - Output: `Hello, young Padawan!`
