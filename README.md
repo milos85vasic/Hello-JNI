@@ -5,7 +5,7 @@ Small demo program that demonstrates binding C++ with Kotlin
 
 The following steps are executed on macOS:
 
-- Make sure that Gradle is installed on your system and added to your system path
+- Make sure that CMake and Gradle are installed on your system and added to your system path
 - Clone and cd into the directory where you have cloned the code
 - `cd JVM`
 - `gradle wrapper`
